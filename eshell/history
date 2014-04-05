@@ -1,0 +1,5 @@
+ls
+ps auxw | grep cabal
+ls
+cd ../.cabal/share/ghc-mod-4.0.1/
+ls
