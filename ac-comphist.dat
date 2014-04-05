@@ -1,40 +1,28 @@
-((("product" .
-   [0 0 0 0 0 0 1])
-  ("test" .
+(((":foreground" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("custom-set-faces" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("global-rainbow-delimiters-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("rainbow-delimiters" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
    [1 0 0 0])
-  ("Test.HUnit.Base" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("nil" .
+  ("set" .
    [1 0 0])
-  ("tetty" .
-   [0 0 1 0 0])
-  ("printf" .
-   [0 0 0 1 0 0])
-  ("add-to-list" .
-   [0 0 0 0 0 0 1 0 0 0 2])
-  ("exec-path" .
-   [0 0 0 0 0 1 0 0 0])
-  ("concat" .
-   [0 0 0 1 0 0])
-  ("getenv" .
-   [1 0 0 0 0 0])
-  ("load-path" .
-   [1 0 0 0 0 0 0 0 0])
-  ("autoload" .
-   [0 0 0 0 1 0 0 0])
-  ("ghc-init" .
-   [1 0 0 0 0 0 0 0])
-  ("ac-sources" .
-   [0 0 0 0 0 0 2 0 0 0])
-  ("ac-ignores" .
-   [0 0 1 1 0 0 0 0 0 0])
-  ("ac-source-imenu" .
-   [0 0 0 0 0 1 0 0 0 0 1 0 0 0 0])
-  ("acons" .
-   [1 0 1 0 0])
-  ("ac-source-ghc-mod" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
   ("require" .
-   [1 0 0 0 0 0 0])
-  ("ghc" .
-   [1 0 0])))
+   [3 0 0 0 0 0 0])
+  ("smartparens-config" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("smartparens-global-mode" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("undo-tree" .
+   [1 0 0 0 0 0 0 0 0])
+  ("global-undo-tree-mode" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("global-" .
+   [0 0 0 0 0 0 1])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("load-theme" .
+   [0 0 0 0 0 0 0 0 2 0])))

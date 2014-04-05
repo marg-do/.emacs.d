@@ -1,39 +1,57 @@
-;; disable backup
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-;; load-path
-(add-to-list 'load-path "~/.emacs.d/elisp/")
+;; theme
+(load-theme 'misterioso t)
 
-;; package
+;; shell
+;;(exec-path-from-shell-initialize t)
+
+;; helm
+(global-set-key (kbd "C-c h") 'helm-mini)
+
+;; hlinum
+;;(require 'hlinum)
+;;(hlinum-activate)
+
+;; linum
+(global-linum-mode t)
+
+;;package
 (require 'package)
-;;; for haskell-mode
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;;; popup
-(add-to-list 'load-path "~/.emacs.d/elisp/popup-el/")
-(require 'popup)
+;; Haskell
+(add-hook 'haskell-mode-hook
+	  (lambda ()
+	    (turn-on-haskell-indent)
+	    ))
 
-;; auto-complete
-(add-to-list 'load-path "~/.emacs.d/elisp/auto-complete/")
+;; flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(define-key global-map "\M-n" 'flycheck-next-error)
+(define-key global-map "\M-p" 'flycheck-previous-error)
+
+;; autocomplete
 (require 'auto-complete-config)
 (ac-config-default)
 
-;; haskell-mode
-(add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
-(add-to-list 'auto-mode-alist '("\\.lhs$" . literate-haskell-mode))
-(add-to-list 'auto-mode-alist '("\\.cabal\\'" . haskell-cabal-mode))
-;;; indent
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-;;; symbols
-(setq haskell-font-lock-symbols t)
-;;; ghc-mod
-(add-to-list 'exec-path (concat (getenv "HOME") "/.cabal/bin"))
-(add-to-list 'load-path "~/.cabal/share/ghc-mod-4.0.1")
-;;;;(autoload 'ghc-init "ghc" nil t)
-;;;;(ghc-init)
-(require 'ghc)
-(add-to-list 'ac-sources 'ac-source-ghc-mod)
-	     
+;; smartparens
+(require 'smartparens-config)
+(smartparens-global-mode t)
+
+;; undotree
+(require 'undo-tree)
+(global-undo-tree-mode t)
+(global-set-key (kbd "M-/") 'undo-tree-redo)
+
+;; rainbow-delimiters
+(require 'rainbow-delimiters)
+(global-rainbow-delimiters-mode t)
+(custom-set-faces '(rainbow-delimiters-depth-l-face ((t (:foreground "#7f8c8d")))))
+
+(provide 'init)
+
+;;; init.el ends here
