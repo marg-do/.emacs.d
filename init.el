@@ -23,20 +23,31 @@
 ;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;; Haskell
-(add-hook 'haskell-mode-hook
-	  (lambda ()
-	    (turn-on-haskell-indent)
-	    ))
+
 
 ;; flycheck
-(add-hook 'after-init-hook #'global-flycheck-mode)
-(define-key global-map "\M-n" 'flycheck-next-error)
-(define-key global-map "\M-p" 'flycheck-previous-error)
+;;(add-hook 'after-init-hook #'global-flycheck-mode)
+;;(define-key global-map "\M-n" 'flycheck-next-error)
+;;(define-key global-map "\M-p" 'flycheck-previous-error)
 
 ;; autocomplete
 (require 'auto-complete-config)
 (ac-config-default)
+
+
+;; Haskell
+;;; ghc-mod
+(add-to-list 'exec-path (concat (getenv "HOME") "/.cabal/bin"))
+(add-to-list 'load-path "~/.cabal/share/ghc-mod-4.0.1")
+(add-to-list 'ac-sources 'ac-source-ghc-mod)
+;;; hook
+(add-hook 'haskell-mode-hook
+	  (lambda ()
+	    (require 'ghc)
+	    (setq haskell-font-lock-symbols t)
+	    (turn-on-haskell-indent)
+	    ))
+
 
 ;; smartparens
 (require 'smartparens-config)
