@@ -7,3 +7,5 @@
 (setq ac-ignore-case nil)
 (setq ac-auto-show-menu 0.05)
 (setq ac-quick-help-delay 0.5)
+
+(add-to-list 'ac-sources 'ac-source-ghc-mod)

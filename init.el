@@ -2,11 +2,18 @@
 (defvar my/packages
   '(init-loader
     auto-complete
+    helm
+    inf-ruby
+    smartparens
     ido
+    multi-term
+    exec-path-from-shell
     powerline
     popwin
     haskell-mode
+    hamlet-mode
     ghc
+    magit
     ))
 
 ;; init package.el
