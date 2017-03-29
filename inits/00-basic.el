@@ -9,7 +9,9 @@
 (setq mac-option-modifier 'meta)
 (setq-default tab-width 4 indent-tabs-mode nil)
 (global-whitespace-mode nil)
-
+(scroll-bar-mode 0)
+(electric-pair-mode t)
+>
 ;; helm
 (require 'helm-config)
 (global-set-key (kbd "M-x") #'helm-M-x)

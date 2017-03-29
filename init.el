@@ -36,6 +36,8 @@
 (el-get-bundle multiple-cursors)
 (el-get-bundle exec-path-from-shell)
 (el-get-bundle powerline)
+;; markdown
+(el-get-bundle markdown-mode)
 ;;; c/c++
 (el-get-bundle irony)
 (el-get-bundle flycheck-irony)
