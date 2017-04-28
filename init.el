@@ -41,6 +41,8 @@
 ;;; c/c++
 (el-get-bundle irony)
 (el-get-bundle flycheck-irony)
+;;; python
+(el-get-bundle python-mode)
 
 ;; init-loader
 (init-loader-load "~/.emacs.d/inits/")
