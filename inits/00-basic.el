@@ -13,6 +13,9 @@
 (electric-pair-mode t)
 ;;(global-whitespace-mode t)
 
+;; font-size
+(set-face-attribute 'default nil :height 120)
+
 ;; helm
 (require 'helm-config)
 (global-set-key (kbd "M-x") #'helm-M-x)

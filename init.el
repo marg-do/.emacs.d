@@ -1,3 +1,4 @@
+
 ;; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil 'noerror)
@@ -31,6 +32,8 @@
 (el-get-bundle magit)
 (el-get-bundle company)
 (el-get-bundle flycheck)
+(el-get-bundle flycheck-pos-tip)
+(el-get-bundle popup)
 (el-get-bundle undo-tree)
 (el-get-bundle undohist)
 (el-get-bundle multiple-cursors)
@@ -42,7 +45,7 @@
 (el-get-bundle irony)
 (el-get-bundle flycheck-irony)
 ;;; python
-(el-get-bundle python-mode)
+(el-get-bundle company-jedi)
 
 ;; init-loader
 (init-loader-load "~/.emacs.d/inits/")

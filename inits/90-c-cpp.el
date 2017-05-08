@@ -13,3 +13,7 @@
      (when (locate-library "flycheck-irony")
        (flycheck-irony-setup))))
 
+;; open .h file in c++ mode
+(setq auto-mode-alist
+      (append '(("\\.h$" . c++-mode))
+              auto-mode-alist))
