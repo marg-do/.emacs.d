@@ -10,6 +10,9 @@
     ;; python
     jedi-core
     company-jedi
+
+    ;; go
+    go-mode
     )
   "")
 
@@ -34,7 +37,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (flycheck company-jedi company exec-path-from-shell magit init-loader helm))))
+    (company-go go-mode go flycheck company-jedi company exec-path-from-shell magit init-loader helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
