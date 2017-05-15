@@ -11,3 +11,8 @@
 (add-hook 'go-mode-hook (lambda ()
                           (set (make-local-variable 'company-backends) '(company-go))
                           (company-mode)))
+
+
+;; copy $GOPATH to emacs
+(exec-path-from-shell-copy-env "GOPATH")
+
