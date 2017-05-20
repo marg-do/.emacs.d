@@ -6,6 +6,10 @@
     exec-path-from-shell
     company
     flycheck
+    yaml-mode
+
+    ;; helm
+    helm-ls-git
 
     ;; python
     jedi-core
@@ -40,7 +44,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (markdown-mode company-go go-mode go flycheck company-jedi company exec-path-from-shell magit init-loader helm))))
+    (helm-ls-git yaml-mode markdown-mode company-go go-mode go flycheck company-jedi company exec-path-from-shell magit init-loader helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
