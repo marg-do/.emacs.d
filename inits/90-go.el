@@ -16,3 +16,4 @@
 ;; copy $GOPATH to emacs
 (exec-path-from-shell-copy-env "GOPATH")
 
+
